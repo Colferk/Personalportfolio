@@ -9,13 +9,13 @@
   
   @media (max-width: 1200px) {
     html {
-      font-size: 80%;
+      font-size: 90%;
     }
   }
   
   @media (max-width: 900px) {
     html {
-      font-size: 40%;
+      font-size: 50%;
     }
   }
   
@@ -75,7 +75,7 @@
   }
   
   .project-tile {
-    margin: 1rem;
+    margin: 5rem;
   }
   
   figcaption {
