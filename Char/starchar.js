@@ -5,17 +5,17 @@ import { people } from "../data/people.js";
 import { getLastNumber, removeChildren } from "../utils/index.js";
 
 
-
-const maleCharacters = people.filter((person) => person.gender === "male");
-
-const femaleCharacters = people.filter((person) => person.gender === "female");
-
 const otherCharacters = people.filter((person) => {
   if (person.gender !== "male" && person.gender !== "female") {
 
     return person;
   }
 });
+
+const maleCharacters = people.filter((person) => person.gender === "male");
+
+const femaleCharacters = people.filter((person) => person.gender === "female");
+
 
 const header = document.createElement("header");
 
