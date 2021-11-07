@@ -24,6 +24,13 @@ const foundFilm = films.find(film => {
     return convertedString === (i + 1)
  })
 
+ figCaption.textContent = foundFilm.title
+  
+ figure.appendChild(figImg)
+
+ figure.appendChild(figCaption)
+
+ filmList.appendChild(figure)
 
 
  console.log(foundFilm)
