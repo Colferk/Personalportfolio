@@ -15,3 +15,15 @@ for (let i = 0; i < films.length; i++) {
     let figCaption = document.createElement('figcaption')
 
 }
+
+
+const foundFilm = films.find(film => {
+
+    const convertedString = parseInt(getLastNumber(film.url), 10)
+
+    return convertedString === (i + 1)
+ })
+
+
+
+ console.log(foundFilm)
