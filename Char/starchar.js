@@ -38,8 +38,6 @@ header.appendChild(femaleButton);
 
 document.body.insertBefore(header, mainContent);
 
-
-
 function populateDOM(characters) {
   removeChildren(mainContent);
   characters.forEach((element) => {
