@@ -16,25 +16,43 @@
   }
   
 
-  figure {
+  .figure {
     margin: 3.5px;
   }
   
-  figure img {
+  .figure img {
     width: 180px;
   }
   
-  figcaption {
+  .figcaption {
     text-align: center;
   }
 
+.buttons {
+width: 400px;
+margin: auto;
+padding: 20px;
 
-  button {
-    font-size: x-large;
-    border-radius: 10px;
-    background-color: rgb(31, 31, 31);
+}
+
+  .male {
+    padding: 15px;
+    box-shadow: rgb(167, 167, 167);
+    font-size: large;
+    text-align: center;
   }
-  
-  button:hover {
-    background-color: rgb(187, 187, 187);
+
+  .male:hover {
+    background-color: rgb(111, 111, 255)
+  }
+
+  .female {
+    padding: 15px;
+    box-shadow: rgb(167, 167, 167);
+    font-size: large;
+    text-align: center;
+  }
+
+  .female:hover {
+    background-color: rgb(170, 80, 255);
   }
