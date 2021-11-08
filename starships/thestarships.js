@@ -28,3 +28,23 @@ function populateNav() {
     navList.appendChild(anchorWrap)
   })
 }
+
+populateNav()
+
+function populateShipView(shipData) {
+  removeChildren(shipView)
+  let shipImage = document.createElement('img')
+  let shipName = document.createElement('div')
+  shipName.className = 'shipName'
+  shipName.textContent = shipData.name
+  let shipNum = getLastNumber(shipData.url)
+  shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
+  shipImage.addEventListener('error', () => {
+    shipName.hidden = true
+    shipImage.hidden = true
+    modal.classList.toggle('is-active')
+    shipMessage.textContent = `The ship "${shipData.name}" has been destroyed!!!`
+  })
+  shipView.appendChild(shipImage)
+  shipView.appendChild(shipName)
+}
