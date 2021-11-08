@@ -31,6 +31,7 @@ h1 {
   width: 400px;
   margin: auto;
   padding: 20px;
+  align-self: center;
 }
 
 .maleButton {
@@ -38,9 +39,6 @@ h1 {
   box-shadow: rgb(167, 167, 167);
   font-size: large;
   text-align: center;
-  width: 400px;
-  margin: auto;
-  padding: 20px;
 }
 
 .maleButton:hover {
@@ -52,9 +50,6 @@ h1 {
   box-shadow: rgb(167, 167, 167);
   font-size: large;
   text-align: center;
-  width: 400px;
-  margin: auto;
-  padding: 20px;
 }
 
 .femaleButton:hover {

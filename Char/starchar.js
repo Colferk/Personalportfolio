@@ -16,9 +16,6 @@ const maleCharacters = people.filter((person) => person.gender === "male");
 
 const femaleCharacters = people.filter((person) => person.gender === "female");
 
-
-const header = document.createElement("header");
-
 const maleButton = document.getElementById("maleButton");
 
 maleButton.textContent = "Male Characters";
