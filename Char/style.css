@@ -9,3 +9,22 @@
     justify-content: center;
   }
   
+
+  header {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(201, 201, 201);
+    padding: 2em 0;
+  }
+
+  figure {
+    margin: 3.5px;
+  }
+  
+  figure img {
+    width: 180px;
+  }
+  
+  figcaption {
+    text-align: center;
+  }
