@@ -2,57 +2,61 @@
   margin: 0;
   box-sizing: border-box;
 }
-  h1 {
-    display: flex;
-    justify-content: space-around;
-    background-color: rgb(114, 114, 114);
-    padding: 1em 0;
-  }
-
-  #main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-
-  .figure {
-    margin: 3.5px;
-  }
-  
-  .figure img {
-    width: 180px;
-  }
-  
-  .figcaption {
-    text-align: center;
-  }
-
-.buttons {
-width: 400px;
-margin: auto;
-padding: 20px;
-
+h1 {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(114, 114, 114);
+  padding: 1em 0;
 }
 
-  .maleButton {
-    padding: 15px;
-    box-shadow: rgb(167, 167, 167);
-    font-size: large;
-    text-align: center;
-  }
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  .maleButton:hover {
-    background-color: rgb(111, 111, 255)
-  }
+.figure {
+  margin: 3.5px;
+}
 
-  .femaleButton {
-    padding: 15px;
-    box-shadow: rgb(167, 167, 167);
-    font-size: large;
-    text-align: center;
-  }
+.figure img {
+  width: 180px;
+}
 
-  .femaleButton:hover {
-    background-color: rgb(170, 80, 255);
-  }
+.figcaption {
+  text-align: center;
+}
+
+.buttons {
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.maleButton {
+  padding: 15px;
+  box-shadow: rgb(167, 167, 167);
+  font-size: large;
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.maleButton:hover {
+  background-color: rgb(111, 111, 255);
+}
+
+.femaleButton {
+  padding: 15px;
+  box-shadow: rgb(167, 167, 167);
+  font-size: large;
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+.femaleButton:hover {
+  background-color: rgb(170, 80, 255);
+}

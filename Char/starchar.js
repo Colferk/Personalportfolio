@@ -19,13 +19,13 @@ const femaleCharacters = people.filter((person) => person.gender === "female");
 
 const header = document.createElement("header");
 
-const maleButton = document.createElement("button");
+const maleButton = document.getElementById("maleButton");
 
 maleButton.textContent = "Male Characters";
 
 maleButton.addEventListener("click", () => populateDOM(maleCharacters));
 
-const femaleButton = document.createElement("button");
+const femaleButton = document.getElementById("femaleButton");
 
 femaleButton.textContent = "Female Characters";
 
