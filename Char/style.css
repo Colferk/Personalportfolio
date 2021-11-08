@@ -28,3 +28,14 @@
   figcaption {
     text-align: center;
   }
+
+
+  button {
+    font-size: x-large;
+    border-radius: 10px;
+    background-color: rgb(31, 31, 31);
+  }
+  
+  button:hover {
+    background-color: rgb(187, 187, 187);
+  }
