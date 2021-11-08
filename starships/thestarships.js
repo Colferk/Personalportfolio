@@ -1,9 +1,30 @@
-import { starships } from "../Data/starships";
+import { starships } from '../data/starships.js'
+import { getLastNumber, removeChildren } from '../utils/index.js'
 
-const nav = document.querySelector(".nav");
-const navList = document.querySelector(".navList");
-const shipView = document.querySelector(".desplaySection");
+const nav = document.querySelector('.nav')
+const navList = document.querySelector('.navList')
+const shipView = document.querySelector('.shipViewer')
 
-function populateView(starships) {
-   
+const modal = document.querySelector('.modal')
+const closeButton = document.querySelector('.modal-close')
+const modalBackground = document.querySelector('.modal-background')
+const shipMessage = document.querySelector('.shipMessage')
+
+closeButton.addEventListener('click', () => modal.classList.toggle('is-active'))
+modalBackground.addEventListener('click', () =>
+  modal.classList.toggle('is-active')
+)
+
+function populateNav() {
+  starships.forEach((starship) => {
+    let anchorWrap = document.createElement('a')
+    anchorWrap.href = '#'
+    let listItem = document.createElement('li')
+    listItem.textContent = starship.name
+
+    anchorWrap.addEventListener('click', () => populateShipView(starship))
+
+    anchorWrap.appendChild(listItem)
+    navList.appendChild(anchorWrap)
+  })
 }

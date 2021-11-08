@@ -1,12 +1,17 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  background-color: rgb(150, 150, 150);
 }
 h1 {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(114, 114, 114);
-  padding: 1em 0;
+  background-color: #181818;
+  padding: 20px;
+  margin: 10px;
+  color: cornsilk;
+  font-family: fantasy;
+  font-size: 50px;
 }
 
 #main {
@@ -15,16 +20,20 @@ h1 {
   justify-content: center;
 }
 
-.figure {
+figure {
   margin: 3.5px;
 }
 
-.figure img {
+figure img {
   width: 180px;
 }
 
-.figcaption {
+figcaption {
   text-align: center;
+  background-color: #181818;
+  color: cornsilk;
+  font-family: fantasy;
+  font-size: 20px;
 }
 
 .buttons {
@@ -39,6 +48,7 @@ h1 {
   box-shadow: rgb(167, 167, 167);
   font-size: large;
   text-align: center;
+  background-color: lightblue;
 }
 
 .maleButton:hover {
@@ -50,8 +60,9 @@ h1 {
   box-shadow: rgb(167, 167, 167);
   font-size: large;
   text-align: center;
+  background-color: lightpink;
 }
 
 .femaleButton:hover {
-  background-color: rgb(170, 80, 255);
+  background-color: rgb(247, 121, 247);
 }
