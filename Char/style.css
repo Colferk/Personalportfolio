@@ -6,7 +6,7 @@
   header {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(37, 37, 37);
     padding: 2em 0;
   }
 
@@ -16,7 +16,6 @@
     justify-content: center;
   }
   
-
 
   figure {
     margin: 3.5px;
