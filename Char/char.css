@@ -12,6 +12,9 @@ h1 {
   color: cornsilk;
   font-family: fantasy;
   font-size: 50px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #main {

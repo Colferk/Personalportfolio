@@ -10,6 +10,9 @@ h1 {
   padding: 20px;
   font-family: fantasy;
   margin: 1px;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 figure {
