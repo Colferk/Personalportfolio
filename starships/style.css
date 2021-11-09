@@ -52,3 +52,11 @@ section {
   font-size: xx-large;
   color:cornsilk;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 1rem;
+  color: #dddddd;
+}
