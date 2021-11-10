@@ -14,23 +14,22 @@ const otherCharacters = people.filter((person) => {
 
 const maleCharacters = people.filter((person) => person.gender === "male");
 
-const femaleCharacters = people.filter((person) => person.gender === "female");
+const femaleCharacters = people.filter((person) => person.gender === "female"); 
 
 const maleButton = document.getElementById("maleButton");
-
-maleButton.textContent = "Male Characters";
 
 maleButton.addEventListener("click", () => populateDOM(maleCharacters));
 
 const femaleButton = document.getElementById("femaleButton");
 
-femaleButton.textContent = "Female Characters";
-
 femaleButton.addEventListener("click", () => populateDOM(femaleCharacters));
 
-header.appendChild(maleButton);
+const otherButton = document.getElementById("otherButton");
 
-header.appendChild(femaleButton);
+otherButton.addEventListener("click", () => populateDOM(otherCharacters));
+
+
+
 
 
 document.body.insertBefore(header, mainContent);

@@ -40,9 +40,9 @@ figcaption {
 }
 
 .buttons {
-  width: 400px;
+  width: fit-content;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   align-self: center;
 }
 
@@ -70,10 +70,22 @@ figcaption {
   background-color: rgb(247, 121, 247);
 }
 
-  footer {
-    display: flex;
-    justify-content: center;
-    font-size: 1rem;
-    padding: 1rem;
-    color: #dddddd;
-  }
+.otherButton {
+  padding: 15px;
+  box-shadow: rgb(167, 167, 167);
+  font-size: large;
+  text-align: center;
+  background-color: green;
+}
+
+.otherButton:hover {
+  background-color: greenyellow;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 1rem;
+  color: #dddddd;
+}
