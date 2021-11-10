@@ -7,6 +7,7 @@ body {
     background-color: rgb(2, 2, 2);
 }
 
+
 header {
   text-align: center;
   background-color: #181818;
@@ -20,6 +21,14 @@ header {
   margin-right: auto;
 }
 
+h1 a {
+  color: cornsilk;
+}
+
+h1 a:hover {
+ color:rgba(255, 239, 173, 0.781);
+}
+
 .mainContainer {
   display: flex;
 }
@@ -29,8 +38,8 @@ header {
   background-color:#181818;
   padding: 20px;
 }
-
-a:hover {
+ 
+nav a:hover {
   color: darkseagreen;
   scale: 20px;
   scale: 10px;
