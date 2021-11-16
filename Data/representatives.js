@@ -1,13 +1,4 @@
-{
-    "status"; "OK",
-    "copyright"; " Copyright (c) 2019 Pro Publica Inc. All Rights Reserved.",
-    "results" [
-        {
-            "congress": "116",
-            "chamber": "House",
-            "num_results": 440,
-            "offset": 0,
-            "members": [
+export const representatives = [
                 {
                     "id": "A000374",
                     "title": "Representative",
@@ -20247,6 +20238,4 @@
                     "votes_with_party_pct": 95.83
                 }
             ]
-        }
-    ]
-}
+        
