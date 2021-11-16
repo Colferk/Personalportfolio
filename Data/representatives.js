@@ -1,7 +1,7 @@
 {
-    "status": "OK",
-    "copyright": " Copyright (c) 2019 Pro Publica Inc. All Rights Reserved.",
-    "results": [
+    "status"; "OK",
+    "copyright"; " Copyright (c) 2019 Pro Publica Inc. All Rights Reserved.",
+    "results" [
         {
             "congress": "116",
             "chamber": "House",
