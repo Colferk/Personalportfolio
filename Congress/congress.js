@@ -46,3 +46,17 @@ function populateSenatorDiv(simpleSenators) {
     senatorDiv.appendChild(senFigure);
   });
 }
+
+const mostSeniorMember = SimplifiedMembers().reduce((acc, senator) =>
+  acc.seniority > senator.seniority ? acc : senator,
+)
+
+seniorityHeading.textContent = `The most senior member of Congress is ${mostSeniorMember.name} who has been in congress for ${mostSeniorMember.seniority} years.`
+
+const mostLoyal = SimplifiedMembers().reduce((acc, senator) => {
+  if (senator.loyaltyPct === 100) {
+    acc.push(senator)
+  }
+  return acc
+}, [])
+
