@@ -3,18 +3,23 @@ import { representatives } from "../data/representatives.js";
 import { getLastNumber, removeChildren } from "../utils/index.js";
 const members = [...senators, ...representatives];
 
-//const senatorButton = document.getElementById("senatorButton");
-//senatorButton.addEventListener("click", () => populateSenatorDiv(senators));
+const republicanButton = document.getElementById("republicanButton");
+republicanButton.addEventListener("click", () =>
+  populateSenatorDiv(SimplifiedSentor(members, "R"))
+);
+
+const democratButton = document.getElementById("democratButton");
+democratButton.addEventListener("click", () =>
+  populateSenatorDiv(SimplifiedSentor(members, "D"))
+);
+
+console.log(senators.party);
 const senatorDiv = document.querySelector(".senators");
 const loyaltyHeading = document.querySelector(".mostLoyal");
 const seniorityHeading = document.querySelector(".seniority");
 
-function SimplifiedMembers(chamberFilter) {
-  const filteredArray = members.filter((member) =>
-    chamberFilter ? member.short_title === chamberFilter : member
-  );
-
-  return filteredArray.map((senator) => {
+function Filteredparty(array) {
+  return array.map((senator) => {
     let middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `;
     return {
       id: senator.id,
@@ -29,6 +34,22 @@ function SimplifiedMembers(chamberFilter) {
   });
 }
 
+function SimplifiedMembers(chamberFilter) {
+  const filteredArray = members.filter((member) =>
+    chamberFilter ? member.party === chamberFilter : member
+  );
+
+  return Filteredparty(filteredArray);
+}
+
+function SimplifiedSentor(chamberFilter, party) {
+  removeChildren(senatorDiv);
+
+  const filteredArray = chamberFilter.filter((x) => x.party == party);
+
+  return Filteredparty(filteredArray);
+}
+
 function populateSenatorDiv(simpleSenators) {
   simpleSenators.forEach((senator) => {
     const senFigure = document.createElement("figure");
@@ -37,6 +58,7 @@ function populateSenatorDiv(simpleSenators) {
 
     figImg.src = senator.imgURL;
     figCaption.textContent = senator.name;
+    //figCaption.textContent = senator.party;
 
     senFigure.appendChild(figImg);
     senFigure.appendChild(figCaption);
@@ -60,9 +82,11 @@ const mostLoyal = SimplifiedMembers().reduce((acc, senator) => {
 const cowardList = document.createElement("ol");
 
 const leastLoyal = mostLoyal.map((coward) => {
-  let listItem = document.createElement("li");
+  let listItem = document.createElement("ul");
   listItem.textContent = coward.name;
   cowardList.appendChild(listItem);
 });
 
 loyaltyHeading.appendChild(cowardList);
+
+populateSenatorDiv(SimplifiedMembers());

@@ -1,18 +1,52 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  color: cornsilk;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: cornsilk;
 }
 
+h1 {
+  text-align: center;
+  background-color: #181818;
+  padding: 20px;
+  font-size: 50px;
+  color: cornsilk;
+
+}
+h1 a {
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.mostLoyal {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: -70px;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+}
 
 .senators {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  color: cornsilk;
 }
 
 figure {
@@ -20,27 +54,47 @@ figure {
   display: flex;
   flex-direction: column;
   margin: 1em;
+  color: cornsilk;
 }
 
 figcaption {
   text-align: center;
+  background: linear-gradient(90deg, #041e42 20%, #9b1c2c 100%);
+  color: cornsilk;
 }
  footer {
      text-align: center;
+     color: cornsilk;
  }
 
  .buttons {
   display: flex;
   margin: auto;
   text-align: center;
+  justify-content: center;
  }
 
- .senatorButton {
+ .democratButton {
    font-size: large;
    margin: 10px;
+   background-color: #0015bc;
+   color: white;
  }
 
- .representativeButton {
+ .republicanButton {
    font-size: large;
    margin: 10px;
+   color: white;
+   background-color: #e9141d;
+
  }
+
+.list {
+  color: #0015bc;
+}
+
+
+
+
+
+
