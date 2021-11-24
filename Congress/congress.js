@@ -1,14 +1,12 @@
-import { senators } from "../Data/senators";
-import { representatives } from "../Data/representatives";
-
+import { senators } from "../data/senators.js";
+import { representatives } from "../data/representatives.js";
+import { getLastNumber, removeChildren } from "../utils/index.js";
 const members = [...senators, ...representatives];
 
-console.log(members.length);
-
+//const senatorButton = document.getElementById("senatorButton");
+//senatorButton.addEventListener("click", () => populateSenatorDiv(senators));
 const senatorDiv = document.querySelector(".senators");
-
 const loyaltyHeading = document.querySelector(".mostLoyal");
-
 const seniorityHeading = document.querySelector(".seniority");
 
 function SimplifiedMembers(chamberFilter) {
@@ -18,7 +16,6 @@ function SimplifiedMembers(chamberFilter) {
 
   return filteredArray.map((senator) => {
     let middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `;
-
     return {
       id: senator.id,
       name: `${senator.first_name}${middleName}${senator.last_name}`,
@@ -48,15 +45,24 @@ function populateSenatorDiv(simpleSenators) {
 }
 
 const mostSeniorMember = SimplifiedMembers().reduce((acc, senator) =>
-  acc.seniority > senator.seniority ? acc : senator,
-)
+  acc.seniority > senator.seniority ? acc : senator
+);
 
-seniorityHeading.textContent = `The most senior member of Congress is ${mostSeniorMember.name} who has been in congress for ${mostSeniorMember.seniority} years.`
+seniorityHeading.textContent = `The most senior member of Congress is ${mostSeniorMember.name} who has been in congress for ${mostSeniorMember.seniority} years.`;
 
 const mostLoyal = SimplifiedMembers().reduce((acc, senator) => {
   if (senator.loyaltyPct === 100) {
-    acc.push(senator)
+    acc.push(senator);
   }
-  return acc
-}, [])
+  return acc;
+}, []);
 
+const cowardList = document.createElement("ol");
+
+const leastLoyal = mostLoyal.map((coward) => {
+  let listItem = document.createElement("li");
+  listItem.textContent = coward.name;
+  cowardList.appendChild(listItem);
+});
+
+loyaltyHeading.appendChild(cowardList);
