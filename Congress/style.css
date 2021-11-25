@@ -23,6 +23,11 @@ h1 a {
   text-decoration: none;
 }
 
+h1 a:hover {
+  color:rgba(255, 239, 173, 0.781);
+  transition: all .5s ease;
+}
+
 h2 {
   text-align: center;
 }
