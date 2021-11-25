@@ -79,15 +79,39 @@ figcaption {
    margin: 10px;
    background-color: #0015bc;
    color: white;
- }
+   padding: 15px;
+   font-weight: 700;
+   text-decoration: none;
+   text-align: center;
+   transition: all .5s ease; 
+}
+   
+ .democratButton:hover {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(rgb(161, 29, 29),0);
+  background-color: #1c4f9b;
+}
+
 
  .republicanButton {
    font-size: large;
    margin: 10px;
    color: white;
    background-color: #e9141d;
+   padding: 15px;
+   font-weight: 700;
+   text-decoration: none;
+   text-align: center;
+   transition: all .5s ease; 
+}
 
- }
+
+ .republicanButton:hover {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(rgb(158, 52, 52),0);
+  background-color: #9b1c2c;
+}
+
 
 .list {
   color: #0015bc;
