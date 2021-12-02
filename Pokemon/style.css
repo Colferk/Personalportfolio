@@ -3,10 +3,24 @@
     box-sizing: border-box;
 }
 
+header {
+    text-align: center;
+    font-size: 60px;
+    background-color:  #181818;
+    color: cornsilk;
+    font-family: fantasy;
+}
+
+.pokeGrid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .scene {
     width: 200px;
     height: 260px;
     perspective: 600px;
+    margin: 10px;
 }
 
 .card {
