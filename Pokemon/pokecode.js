@@ -27,7 +27,7 @@ const newButton = document.querySelector(".newPokemon");
 newButton.addEventListener("click", () => {
   let pokeName = prompt("Name your Pokemon!");
   let pokeHeight = prompt("Pokemons height.");
-  let pokeWeight = prompt('Pokemons weight.')
+  let pokeWeight = prompt('Pokemons weight in kg.')
   let pokeAbilities = prompt(
     "Put your abilitiies (use a comma for more than one)"
   );
