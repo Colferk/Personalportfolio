@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(2, 2, 2);
+}
+
 h1 {
     text-align: center;
     font-size: 60px;
@@ -11,9 +15,15 @@ h1 {
     font-family: fantasy;
 }
 
+.buttons {
+    display:flex;
+    justify-content:space-evenly
+}
+
 .pokeGrid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .scene {
@@ -54,4 +64,10 @@ h1 {
 
 figure img {
     width: 200px;
+}
+
+figcaption {
+    text-align: center;
+    background-color: black;
+    color: cornsilk;
 }

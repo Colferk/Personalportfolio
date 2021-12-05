@@ -35,7 +35,7 @@ newButton.addEventListener("click", () => {
 populatePokeCards(newPokemon)
 });
 
-//
+// 
 
 function populatePokeCards(singlePokemon) {
   const pokeScene = document.createElement("div");
@@ -87,7 +87,7 @@ function populateCardBack(pokemon) {
 
 class Pokemon {
   constructor(name, height, weight, abilities) {
-      (this.id = 200),
+      //(this.id = 200),
       (this.name = name),
       (this.height = height),
       (this.weight = weight),
