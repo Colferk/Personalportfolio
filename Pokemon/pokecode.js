@@ -36,7 +36,8 @@ newButton.addEventListener("click", () => {
     "Put your abilitiies (use a comma for more than one)"
   );
   let newPokemon = new Pokemon(pokeName, pokeHeight, pokeWeight, getAbilitiesArray(pokeAbilities));
-populatePokeCards(newPokemon)
+  removeChildren(pokeGrid)
+  populatePokeCards(newPokemon)
 });
 
 const morePokemon = document.querySelector('.morePokemon')

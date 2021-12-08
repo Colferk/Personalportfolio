@@ -11,9 +11,19 @@ h1 {
     text-align: center;
     font-size: 60px;
     background-color:  #181818;
-    color: cornsilk;
     font-family: fantasy;
+    text-decoration: none;
 }
+
+h1 a {
+    background-color: #181818;
+    color: cornsilk;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    color:rgba(255, 239, 173, 0.781);
+  }
 
 .buttons {
     display:flex;
