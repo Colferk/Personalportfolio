@@ -35,10 +35,12 @@ function pokemonName(name ="", limit = 1) {
   });
 }
 
+
 const pokeGrid = document.querySelector(".pokeGrid");
 const loadButton = document.querySelector(".loadPokemon");
 loadButton.addEventListener("click", () => {
   removeChildren(pokeGrid)
+  //let whatGen  = prompt('What Generation?')
   let howMany = prompt('How many pokemon to load?')
   loadPokemon(howMany)
 })
@@ -59,7 +61,7 @@ newButton.addEventListener("click", () => {
 const morePokemon = document.querySelector('.morePokemon')
 
 morePokemon.addEventListener('click', () => {
-  let name = prompt('Choose your pokemon (enter name)')
+  let name = prompt('Choose your pokemon (enter name or ID)')
   pokemonName(name)
 })
 
