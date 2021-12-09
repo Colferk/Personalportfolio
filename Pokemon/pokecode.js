@@ -7,11 +7,13 @@ function getAPIData(url) {
   }
 }
 
-function loadPokemon(offset = 100, limit = 30) {
+function loadPokemon(limit = 30, offset = 100) {
   removeChildren(pokeGrid);
+  console.log
   getAPIData(
-    `https://pokeapi.co/api/v2/pokemon?limit=${limit}$offset=${offset}`
+    `https://pokeapi.co/api/v2/pokemon/?limit=${limit}$offset=${offset}`
   ).then(async (data) => {
+    console.log(data.results)
     for (const pokemon of data.results) {
       await getAPIData(pokemon.url).then((pokeData) =>
         populatePokeCards(pokeData)
@@ -20,11 +22,25 @@ function loadPokemon(offset = 100, limit = 30) {
   });
 }
 
+function pokemonName(name ="", limit = 1) {
+  let url=`https://pokeapi.co/api/v2/pokemon/${name}`
+  removeChildren(pokeGrid);
+  getAPIData(
+    url
+  ).then(async (data) => {
+    console.log(data)
+      await getAPIData(url).then((pokeData) =>
+        populatePokeCards(pokeData)
+      );
+  });
+}
+
 const pokeGrid = document.querySelector(".pokeGrid");
 const loadButton = document.querySelector(".loadPokemon");
 loadButton.addEventListener("click", () => {
   removeChildren(pokeGrid)
-  loadPokemon()
+  let howMany = prompt('How many pokemon to load?')
+  loadPokemon(howMany)
 })
 
 const newButton = document.querySelector(".newPokemon");
@@ -41,15 +57,14 @@ newButton.addEventListener("click", () => {
 });
 
 const morePokemon = document.querySelector('.morePokemon')
+
 morePokemon.addEventListener('click', () => {
-  let startPoint = prompt('Starting ID')
-  let howMany = prompt('How many more pokemon to load?')
-  loadPokemon(startPoint, howMany)
+  let name = prompt('Choose your pokemon (enter name)')
+  pokemonName(name)
 })
 
 function getAbilitiesArray(commaString) {
   let tempArray = commaString.split(',')
-  console.log(tempArray)
   return tempArray.map((abilityName) => {
     return {
       ability: {
@@ -96,6 +111,7 @@ function populateCardFront(pokemon) {
 function populateCardBack(pokemon) {
   const pokeBack = document.createElement("div");
   pokeBack.className = "cardFace back";
+
   const label = document.createElement("h4");
   label.textContent = "Abilities:";
   pokeBack.appendChild(label);
@@ -104,8 +120,26 @@ function populateCardBack(pokemon) {
     let listItem = document.createElement("li");
     listItem.textContent = abilityItem.ability.name;
     abilityList.appendChild(listItem);
-  });
-  pokeBack.appendChild(abilityList);
+
+  
+});
+   pokeBack.appendChild(abilityList);
+
+  const pokeTypes = document.createElement("h4")
+  pokeTypes.textContent = "Type"
+  const allTypes = document.createElement("ul")
+  pokemon.types.forEach((typeItem) => {
+    let typeList = document.createElement('li')
+    typeList.textContent =typeItem.type.name;
+    pokeTypes.appendChild(typeList)
+    console.log(pokemon.types)
+  })
+ 
+  pokeBack.appendChild(pokeTypes);
+
+
+  
+  
   return pokeBack;
 }
 
