@@ -47,7 +47,7 @@ newButton.addEventListener("click", () => {
   // let pokeWeight = prompt("Pokemons weight in kg.");
   let poke_Types = prompt("Your pokemon type");
   let pokeAbilities = prompt(
-    "Put your abilitiies (use a comma for more than one)"
+    "Put your abilities (use a comma for more than one)"
   );
   let newPokemon = new Pokemon(
     pokeName,
