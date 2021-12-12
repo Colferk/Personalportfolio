@@ -18,6 +18,16 @@
       font-size: 50%;
     }
   }
+
+  @keyframes bounce {
+    0%,  
+    100% {
+       -webkit-transform: translateY(0);
+    } 
+    50% {
+        -webkit-transform: translateY(-10px);
+    }
+}
   
   a {
     text-decoration: none;
@@ -83,6 +93,10 @@
     font-size: x-large;
     color: #555555;
     font-family: fantasy;
+  }
+
+  figure img:hover{
+    animation: bounce 1s infinite;
   }
 
   #contact {
