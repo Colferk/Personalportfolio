@@ -50,9 +50,9 @@ h1 a:hover {
     font-size: large;
 }
 
-.card:hover {
+/* .card:hover {
     transform: scale(1.09);
-}
+} */
 
 .card.is-flipped {
     transform: rotateX(180deg) rotateZ(180deg);
@@ -66,15 +66,17 @@ h1 a:hover {
     backface-visibility: hidden;
     border-radius: 10px;
 }
-
+.front:hover{
+transform: scale(1.09);
+}
 .front {
+
     background: cornsilk;
 }
 
 .back {
     background: honeydew;
-    transform: rotateY(180deg);
-    
+    transform: rotateY(180deg); 
 }
 
 img {

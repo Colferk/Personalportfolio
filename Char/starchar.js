@@ -16,7 +16,7 @@ const maleCharacters = people.filter((person) => person.gender === "male");
 
 const femaleCharacters = people.filter((person) => person.gender === "female"); 
 
-const maleButton = document.getElementById("maleButton");
+const maleButton = document.getElementById("maleButton")
 
 maleButton.addEventListener("click", () => populateDOM(maleCharacters));
 
@@ -32,7 +32,7 @@ otherButton.addEventListener("click", () => populateDOM(otherCharacters));
 
 
 
-document.body.insertBefore(header, mainContent);
+
 
 function populateDOM(characters) {
   removeChildren(mainContent);
