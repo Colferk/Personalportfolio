@@ -22,7 +22,7 @@ function loadPokemon(limit = 30, offset = 100) {
   });
 }
 
-function pokemonName(name = "", limit = 1) {
+function pokemonName(name = "") {
   let url = `https://pokeapi.co/api/v2/pokemon/${name}`;
   removeChildren(pokeGrid);
   getAPIData(url).then(async (data) => {
@@ -144,14 +144,19 @@ function populateCardBack(pokemon) {
   pokemon.types.forEach((typeItem) => {
     let typeList = document.createElement("img");
     typeList.textContent = typeItem.type.name;
-    //const pokeTypeImg = document.createElement('img')
      let pokeTypeImg = new Image (60, 30);
     pokeTypeImg.src = getPokeTypeImg(typeList.textContent)
-    //pokeTypes.appendChild(typeList);
-   
+
     pokeBack.appendChild(pokeTypeImg)
   });
 
+  const pokePix = document.createElement("img");
+  if (pokemon.id === 1000) {
+    pokePix.src = "../Images/pokeball3.png";
+  } else {
+    pokePix.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`;
+    pokeBack.appendChild(pokePix)
+  }
   
 
   return pokeBack;
