@@ -29,6 +29,24 @@ html {
   }
 }
 
+@keyframes slide-in {
+  100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+  100% { -webkit-transform: translateX(0%); }
+}
+  
+@keyframes slide-out {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+  0% { -webkit-transform: translateX(0%); }
+  100% { -webkit-transform: translateX(-100%); }
+}
+
 a {
   text-decoration: none;
 }
@@ -71,10 +89,7 @@ a {
   background-color: #b1b1b1;
   height: 100vh;
   font-size: 3rem;
-}
-
-#welcom-section a:hover {
-  transform: scale(1.5);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .projects-grid {
@@ -148,7 +163,6 @@ footer {
 button {
   border: none;
   background-color: inherit;
-  padding: 14px 28px;
   font-size: 60px;
   cursor: pointer;
   display: inline-block;
@@ -158,4 +172,28 @@ button {
 
 button:hover{
 animation: bounce .2s infinite;
+}
+
+
+.me {
+  align-self: flex-end;
+  transform: translate(80px, 0px);
+}
+
+
+
+#slider {
+  position: absolute;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+
+.slide-in {
+  animation: slide-in .5s forwards;
+  -webkit-animation: slide-in .5s forwards;
+}
+
+.slide-out {
+  animation: slide-out 3s forwards;
+  -webkit-animation: slide-out 3s forwards;
 }
